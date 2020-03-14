@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  webserver:
+    build:
+      context: ./
+    volumes:
+        - ./src/:/var/www/html/
+    ports:
+        - "80:80"
+    restart: always
+
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: codetest
+      MYSQL_DATABASE: codetest
+      MYSQL_USER: codetest
+      MYSQL_PASSWORD: codetest
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql-init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart: always
+
+volumes:
+  db_data:
