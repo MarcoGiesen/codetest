@@ -17,3 +17,10 @@ Please write a reporting tool for the orders table in the provided MySQL databas
 - provide a short description of your solution
 - Let us know where we can see the final version (sourcecode)
 - Please make sure the final version still runs with a `docker-compose up -d
+
+
+## Setup
+
+- connect to docker container with `docker exec -it [container name] /bin/bash`
+- move to project folder `cd /var/www/html`
+- run composer install `composer install`
