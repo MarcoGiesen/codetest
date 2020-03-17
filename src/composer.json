@@ -1,0 +1,11 @@
+{
+    "name": "root/html",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Domain\\": "Domain/",
+            "Templates\\": "Templates/"
+        }
+    }
+}
